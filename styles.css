@@ -6,20 +6,20 @@
    ============================================================ */
 
 :root {
-  --green-900: #0A2C21;
-  --green-800: #0E3B2C;
-  --green-600: #16543E;
-  --green-400: #2E8266;
-  --orange-500: #EE6C1E;
-  --orange-600: #D65E14;
-  --orange-300: #F5A879; /* derived tint: small accent text on dark green (AA) */
-  --terracotta: #B4664C;
-  --sand: #F4EEE3;
+  --green-900: #002E27;
+  --green-800: #004238;
+  --green-600: #0A5A49;
+  --green-400: #4E9583;
+  --orange-500: #726944;
+  --orange-600: #5E5637;
+  --orange-300: #C9B98C; /* derived tint: small accent text on dark green (AA) */
+  --terracotta: #8C6A3F;
+  --sand: #F1ECDF;
   --cream: #FAF7F1;
   --white: #FFFFFF;
-  --ink: #12241D;
-  --body: #33413B;
-  --muted: #6B7A73;
+  --ink: #1C2D3C;
+  --body: #3A3A33;
+  --muted: #857F72;
   --line: #E4E0D5;
   --success: #1B7A4B;
   --success-bg: #E7F3EC;

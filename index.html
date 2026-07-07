@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ============================================================
+     DEEM SPACE — Al Malqa office-rental landing page
+     Arabic-first (RTL) · English toggle · FORM-ONLY conversion
+     Replace the placeholders below, then deploy (GitHub → Vercel):
+       GTM-XXXXXXX          → your GTM container ID
+       {{SHEET_WEBAPP_URL}} → Apps Script Web App URL (or Sheets connector)
+       {{MAP_EMBED}}        → Google Maps iframe src for the Al Malqa branch
+       {{PRIVACY_URL}}      → privacy note link
+       {{GOOGLE_REVIEWS_URL}} → link to your Google reviews
+       assets/deem-space-availability-map.html → the lead magnet
+     ============================================================ -->
+
+<!-- dataLayer MUST init before GTM -->
+<script>window.dataLayer = window.dataLayer || [];</script>
+
+<!-- Google Tag Manager (replace GTM-XXXXXXX) -->
+<script>var GTM_ID='GTM-XXXXXXX'; /* ← replace (also in the <noscript> below) */
+if(!/XXXXXXX/.test(GTM_ID))(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',GTM_ID);</script>
+<!-- End Google Tag Manager -->
+
+<title>ديم سبيس الملقا | مكاتب فاخرة جاهزة للإيجار شمال الرياض</title>
+<meta name="description" content="مكتب متكامل مفروش ومرخّص في الملقا شمال الرياض، يتّسع حتى ٧٤ موظفًا بعقد سنوي وموقع مرموق على شارع أنس بن مالك. احجز جولة الآن.">
+<link rel="canonical" href="https://deemspace.vercel.app/">
+<link rel="alternate" hreflang="ar" href="https://deemspace.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://deemspace.vercel.app/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://deemspace.vercel.app/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ديم سبيس الملقا | مكاتب فاخرة جاهزة للإيجار شمال الرياض">
+<meta property="og:description" content="مساحة مكتبية متكاملة مفروشة ومرخّصة في الملقا — احجز جولة الآن.">
+<meta property="og:image" content="https://deemspace.vercel.app/assets/og-image.jpg">
+<meta property="og:url" content="https://deemspace.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://deemspace.vercel.app/assets/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- HEADER -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#" aria-label="Deem Space"><b>DEEM</b> <span>SPACE</span></a>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langBtn" type="button" aria-label="Switch language">EN</button>
+      <a class="btn btn-primary js-scroll" href="#lead-form" data-en="Book a viewing">احجز جولة</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero on-dark">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <div class="eyebrow" data-en="Premium serviced offices — Al Malqa, North Riyadh">مساحات مكتبية فاخرة — الملقا، شمال الرياض</div>
+      <h1 data-en="Your office in Al Malqa — ready to work from day one.">مكتبك جاهز للعمل في الملقا — من أول يوم.</h1>
+      <p class="sub" data-en="A fully furnished, licensed workspace for up to 74 people, on a clear yearly contract, with a prestige address on Anas Ibn Malik Street — without the fit-out bill or the wait.">مساحة متكاملة مفروشة بالكامل ومرخّصة، تتّسع حتى ٧٤ موظفًا، بعقد سنوي واضح وموقع مرموق على شارع أنس بن مالك — بدون تكاليف تجهيز ولا انتظار.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg js-scroll" href="#lead-form" data-en="Book a viewing">احجز جولة</a>
+        <a class="btn btn-ghost btn-lg js-scroll" href="#gallery" data-en="See the space">شاهد المساحة</a>
+      </div>
+      <div class="trust">
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6B27A" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span data-en="Licensed by Civil Defense &amp; Municipality">مرخّص من الدفاع المدني والبلدية</span></span>
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6B27A" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span data-en="Dedicated parking">مواقف خاصة</span></span>
+        <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F6B27A" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span data-en="5★ from clients on Google">٥ نجوم من عملائنا على خرائط جوجل</span></span>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="assets/gallery-1.jpg" alt="قاعة اجتماعات في ديم سبيس بإضاءة طبيعية" width="1200" height="900" fetchpriority="high">
+      <div class="hero-badge"><b>74</b><span data-en="workstations, one floor">محطة عمل بدور واحد</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE PROPS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow" data-en="Why Deem Space">ليش ديم سبيس</div>
+      <h2 data-en="An office that works the way your business does.">مكتب يشتغل بنفس مرونة أعمالك.</h2>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+        <h3 data-en="Ready from day one">جاهز من أول يوم</h3>
+        <p data-en="Furnished and IT-ready — move in and work immediately.">مفروش ومجهّز تقنيًا — تنتقل وتبدأ العمل فورًا.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h12"/></svg></div>
+        <h3 data-en="Yearly contract">عقد سنوي</h3>
+        <p data-en="One clear yearly contract — not a five-year trap.">عقد سنوي واضح — بدون التزام ٥ سنوات.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/></svg></div>
+        <h3 data-en="Licensed &amp; safe">مرخّص وآمن</h3>
+        <p data-en="Civil Defense + Municipality licensed, with emergency systems.">الدفاع المدني والبلدية وأنظمة الطوارئ — انتقل باطمئنان.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V8l9-5 9 5v13M9 21v-6h6v6"/></svg></div>
+        <h3 data-en="Grows with you">يكبر معك</h3>
+        <p data-en="From a private suite to a full floor — up to 74 workstations.">من مكتب مغلق حتى دور كامل بسعة ٧٤ موظفًا.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="sec sec-sand">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" data-en="Everything included">كل شيء متوفّر</div>
+      <h2 data-en="Everything the space includes.">كل ما تحتاجه المساحة.</h2>
+    </div>
+    <ul class="amen" id="amenList"></ul>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow" data-en="Take a look inside">جولة بالصور</div>
+      <h2 data-en="Take a look inside.">جولة داخل المساحة.</h2>
+    </div>
+    <div class="grid-g">
+      <figure class="shot"><img loading="lazy" decoding="async" src="assets/hero.jpg" alt="صالة استقبال بإطلالة على أفق الرياض"><figcaption data-en="A lounge over the skyline">صالة بإطلالة على الأفق</figcaption></figure>
+      <figure class="shot"><img loading="lazy" decoding="async" src="assets/gallery-2.jpg" alt="قاعة مجلس الإدارة"><figcaption data-en="The boardroom">قاعة مجلس الإدارة</figcaption></figure>
+      <figure class="shot"><img loading="lazy" decoding="async" src="assets/gallery-3.jpg" alt="قاعة جاهزة لاستقبال العملاء"><figcaption data-en="Client-ready">جاهزة لاستقبال عملائك</figcaption></figure>
+      <figure class="shot"><img loading="lazy" decoding="async" src="assets/gallery-4.jpg" alt="تصميم داخلي يبعث على التركيز"><figcaption data-en="Design that helps you focus">تصميم يبعث على التركيز</figcaption></figure>
+      <figure class="shot"><img loading="lazy" decoding="async" src="assets/gallery-5.jpg" alt="غرف مكالمات خاصة"><figcaption data-en="Private call pods">غرف مكالمات خاصة</figcaption></figure>
+      <figure class="shot"><img loading="lazy" decoding="async" src="assets/gallery-6.jpg" alt="تراس بإطلالة على أفق الرياض"><figcaption data-en="A terrace over the skyline">تراس بإطلالة على الأفق</figcaption></figure>
+    </div>
+    <div class="tour">
+      <video src="assets/tour.mp4" poster="assets/tour-poster.jpg" controls muted playsinline preload="none" aria-label="جولة صامتة داخل المكتب"></video>
+    </div>
+    <div class="center" style="margin-top:30px">
+      <a class="btn btn-primary js-scroll" href="#lead-form" data-en="Book an in-person viewing">احجز جولة على الطبيعة</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec sec-sand">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow" data-en="What visitors say">آراء الزوّار</div>
+      <h2 data-en="What visitors say.">ماذا يقول زوّارنا.</h2>
+    </div>
+    <div class="reviews">
+      <div class="rev">
+        <div class="stars" aria-label="5 out of 5">★★★★★</div>
+        <p data-en="&ldquo;A unique experience for those seeking tranquillity and a spacious setting. Thank you to the staff.&rdquo;">«تجربة فريدة لمن يبحث عن الهدوء والمساحة الواسعة. شكرًا لطاقم العمل.»</p>
+        <div class="who"><div class="av">A</div><div><b>Ahmad Alrashed</b><small data-en="Local Guide · translated from Arabic">مرشد محلي · مُترجم من العربية</small></div></div>
+      </div>
+      <div class="rev">
+        <div class="stars" aria-label="5 out of 5">★★★★★</div>
+        <p data-en="Rated the space five stars." >قيّم المساحة بخمس نجوم.</p>
+        <div class="who"><div class="av">W</div><div><b>Wadah Alhag</b><small data-en="Google review · 4 reviews">مراجعة جوجل · ٤ مراجعات</small></div></div>
+      </div>
+      <div class="rev">
+        <div class="stars" aria-label="5 out of 5">★★★★★</div>
+        <p data-en="Rated the space five stars.">قيّم المساحة بخمس نجوم.</p>
+        <div class="who"><div class="av">N</div><div><b>Nasie Saudi</b><small data-en="Google review">مراجعة جوجل</small></div></div>
+      </div>
+    </div>
+    <div class="g-agg">
+      <span class="stars" style="margin:0">★★★★★</span>
+      <span data-en="5.0 from recent client reviews on Google">٥٫٠ من مراجعات عملائنا على خرائط جوجل</span>
+      <a href="{{GOOGLE_REVIEWS_URL}}" target="_blank" rel="noopener" data-en="See reviews">اطّلع على المراجعات</a>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD MAGNET -->
+<section class="sec">
+  <div class="wrap">
+    <div class="magnet">
+      <div>
+        <h2 data-en="Get the availability + district map.">احصل على خريطة المواقع والتوافر.</h2>
+        <p data-en="Fill in the form and we'll send a one-pager showing exactly where Deem sits on Anas Ibn Malik Street relative to King Salman Rd, Prince Turki Rd and Prince Mohammed bin Abdulaziz Rd — plus which suites are free right now.">عبّئ النموذج ونرسل لك خريطة توضّح موقع ديم على شارع أنس بن مالك بالنسبة لطريق الملك سلمان وطريق الأمير تركي وطريق الأمير محمد بن عبدالعزيز — مع المكاتب المتاحة حاليًا.</p>
+        <div style="margin-top:22px"><a class="btn btn-primary js-scroll" href="#lead-form" data-en="Send &amp; get the map">أرسل الطلب واحصل على الخريطة</a></div>
+      </div>
+      <div class="mapcard">
+        <b>1&nbsp;PDF</b>
+        <span data-en="District map + live suite availability">خريطة الموقع + المكاتب المتاحة</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="sec sec-sand" id="lead-form">
+  <div class="wrap form-wrap">
+    <div class="form-left">
+      <div class="eyebrow" data-en="Book your viewing">احجز جولتك</div>
+      <h2 data-en="Book your viewing at Deem Space.">احجز جولتك في ديم سبيس.</h2>
+      <p class="muted" data-en="We reply within business hours. No obligation. Your details are used only to contact you about the office.">رد خلال ساعات العمل. بدون التزام. بياناتك تُستخدم للتواصل معك بخصوص المكتب فقط.</p>
+      <ul>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span data-en="A private tour at a time that suits you">جولة خاصة في الوقت المناسب لك</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span data-en="The availability + district map PDF, instantly">خريطة المواقع والتوافر (PDF) فورًا</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span data-en="A tailored quote for your team size">عرض سعر مخصّص حسب حجم فريقك</span></li>
+      </ul>
+    </div>
+
+    <div class="formcard">
+      <div class="form-alert error" id="formError" data-en="Couldn't send. Please try again or email info@deemspace.com">تعذّر الإرسال. حاول مرة أخرى أو راسلنا على info@deemspace.com</div>
+
+      <form id="leadForm" class="hidden-form" novalidate>
+        <div class="field">
+          <label for="name" data-en="Full name">الاسم الكامل</label>
+          <input type="text" id="name" name="name" autocomplete="name" required data-en-ph="e.g., Mohammed Alotaibi" placeholder="مثال: محمد العتيبي">
+          <div class="err-msg" data-en="Please enter your name.">فضلًا اكتب اسمك.</div>
+        </div>
+
+        <div class="field" id="phoneField">
+          <label for="phone" data-en="Mobile number">رقم الجوال</label>
+          <div class="phone-row">
+            <span class="cc">🇸🇦 +966</span>
+            <input type="tel" id="phone" name="phone" inputmode="numeric" autocomplete="tel-national" required placeholder="5XXXXXXXX">
+          </div>
+          <div class="field-hint" data-en="We'll contact you on this number.">نتواصل معك على هذا الرقم.</div>
+          <div class="err-msg" data-en="Invalid mobile — must start with 5 and be 9 digits.">رقم الجوال غير صحيح — يجب أن يبدأ بـ 5 ويتكوّن من ٩ أرقام.</div>
+        </div>
+
+        <div class="field">
+          <label for="email" data-en="Email (optional)">البريد الإلكتروني (اختياري)</label>
+          <input type="email" id="email" name="email" autocomplete="email" data-en-ph="name@company.com" placeholder="name@company.com">
+          <div class="err-msg" data-en="Please enter a valid email or leave it blank.">أدخل بريدًا صحيحًا أو اتركه فارغًا.</div>
+        </div>
+
+        <div class="field">
+          <label for="company" data-en="Company name (optional)">اسم الشركة (اختياري)</label>
+          <input type="text" id="company" name="company" autocomplete="organization" data-en-ph="Your company" placeholder="اسم شركتك">
+        </div>
+
+        <div class="field">
+          <label for="details" data-en="Your question or more details (optional)">سؤالك أو تفاصيل إضافية (اختياري)</label>
+          <textarea id="details" name="details" data-en-ph="Team size, preferred move-in date, questions…" placeholder="عدد الفريق، تاريخ الانتقال المفضّل، أي أسئلة…"></textarea>
+        </div>
+
+        <!-- honeypot -->
+        <div class="hp" aria-hidden="true"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+
+        <button type="submit" class="btn btn-primary submit"><span class="spinner"></span><span class="btn-label" data-en="Send &amp; get the map">أرسل الطلب واحصل على الخريطة</span></button>
+        <p class="form-note"><span data-en="By submitting you agree to be contacted about this offer.">بالإرسال أنت توافق على أن نتواصل معك بخصوص هذا العرض.</span> <a href="{{PRIVACY_URL}}" style="text-decoration:underline" data-en="See our privacy note.">اطّلع على سياسة الخصوصية.</a></p>
+      </form>
+
+      <!-- success -->
+      <div class="success" id="successBox" role="status" aria-live="polite">
+        <div class="check"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3 data-en="Got it ✔">تم استلام طلبك ✔</h3>
+        <p data-en="We'll be in touch shortly. Download your availability + district map now.">بنتواصل معك قريبًا. حمّل خريطة المواقع والتوافر الآن.</p>
+        <a class="btn btn-primary" id="magnetDownload" href="assets/deem-space-availability-map.html" target="_blank" rel="noopener" data-en="Get the availability + district map">احصل على خريطة المواقع والتوافر</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="eyebrow" data-en="FAQ">أسئلة شائعة</div>
+      <h2 data-en="Questions, answered.">أسئلة قبل ما تقرّر.</h2>
+    </div>
+    <div class="faq" id="faq">
+      <details class="q"><summary><span class="qbtn"><span data-en="How does the rental contract work?">كيف يعمل عقد الإيجار؟</span><span class="plus">+</span></span></summary><div class="a"><p data-en="Deem runs on a simple yearly contract — renewable year by year, and you can add rooms as you grow. No five-year commitment.">عقد ديم سنوي وبسيط — يتجدد سنة بسنة، وتقدر تضيف غرفًا مع نموّ فريقك. بدون التزام ٥ سنوات.</p></div></details>
+      <details class="q"><summary><span class="qbtn"><span data-en="Isn't a managed office more expensive than a normal lease?">أليس المكتب المُدار أغلى من الإيجار العادي؟</span><span class="plus">+</span></span></summary><div class="a"><p data-en="One predictable payment replaces rent + fit-out + furniture + IT + maintenance + licensing — usually a lower total cost, and you're productive on day one while North-Riyadh rents keep climbing.">دفعة واحدة واضحة تغني عن الإيجار والتجهيز والأثاث والتقنية والصيانة والتراخيص — غالبًا تكلفة إجمالية أقل، وتبدأ العمل من أول يوم بينما إيجارات شمال الرياض في ارتفاع.</p></div></details>
+      <details class="q"><summary><span class="qbtn"><span data-en="Will it be ready and compliant?">هل المساحة جاهزة ومرخّصة؟</span><span class="plus">+</span></span></summary><div class="a"><p data-en="Yes — furnished and licensed by Civil Defense and the Municipality, with a dedicated IT room and emergency systems. Move in and operate.">نعم — مفروشة ومرخّصة من الدفاع المدني والبلدية، مع غرفة تقنية مستقلة وأنظمة طوارئ. تنتقل وتشتغل مباشرة.</p></div></details>
+      <details class="q"><summary><span class="qbtn"><span data-en="Can it hold my whole team and grow with us?">هل تتّسع لكامل فريقي وتكبر معنا؟</span><span class="plus">+</span></span></summary><div class="a"><p data-en="Up to 74 workstations across 14 private suites plus an executive suite — take one room or a whole floor and expand as you hire.">حتى ٧٤ محطة عمل عبر ١٤ مكتبًا خاصًا إضافة إلى مكتب تنفيذي — خذ غرفة واحدة أو دورًا كاملًا ووسّع مع نموّك.</p></div></details>
+      <details class="q"><summary><span class="qbtn"><span data-en="Is the location convenient and prestigious?">هل الموقع مميّز وسهل الوصول؟</span><span class="plus">+</span></span></summary><div class="a"><p data-en="Al Malqa, on Anas Ibn Malik Street — minutes from King Salman Rd, Prince Turki bin Abdulaziz Rd and Prince Mohammed bin Abdulaziz Rd, with dedicated parking.">الملقا، على شارع أنس بن مالك — دقائق عن طريق الملك سلمان وطريق الأمير تركي بن عبدالعزيز وطريق الأمير محمد بن عبدالعزيز، مع مواقف خاصة.</p></div></details>
+      <details class="q"><summary><span class="qbtn"><span data-en="Can I see it before committing?">هل أقدر أشوفها قبل الالتزام؟</span><span class="plus">+</span></span></summary><div class="a"><p data-en="Absolutely. Submit the form, get the availability + district map, and we'll arrange a viewing at a time that suits you.">أكيد. عبّئ النموذج، واحصل على خريطة المواقع والتوافر، ونرتّب لك جولة في الوقت المناسب.</p></div></details>
+    </div>
+    <div class="center" style="margin-top:26px">
+      <a class="btn btn-ghost js-scroll" href="#lead-form" data-en="Another question? Book a viewing.">عندك سؤال ثاني؟ احجز جولة.</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="sec final on-dark">
+  <div class="wrap">
+    <h2 data-en="Ready to see your new office in Al Malqa?">جاهز تشوف مكتبك الجديد في الملقا؟</h2>
+    <a class="btn btn-primary btn-lg js-scroll" href="#lead-form" data-en="Book a viewing now">احجز جولة الآن</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand"><b style="color:var(--orange-500)">DEEM</b> <span style="color:#fff">SPACE</span></div>
+        <p data-en="Deem Space — part of Al Manahil Welfare Foundation's SME-enablement initiative.">ديم سبيس — مساحات ديم، ضمن مبادرة مؤسسة المناهل الخيرية لتمكين المنشآت الصغيرة والمتوسطة.</p>
+        <div class="socials" aria-label="Social links">
+          <a href="https://www.instagram.com/deem_space" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.tiktok.com/@deem_space" target="_blank" rel="noopener" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2 1.6 3.6 3.6 3.9v2.6c-1.3.1-2.6-.3-3.6-1v6.1c0 3.3-2.7 5.9-6 5.4-2.4-.4-4.2-2.5-4.2-5 0-3.1 2.9-5.4 5.9-4.7v2.7c-.4-.1-.9-.2-1.4-.1-1.1.2-1.9 1.1-1.8 2.3.1 1 .9 1.8 1.9 1.9 1.2.1 2.2-.8 2.2-2V3H16z"/></svg></a>
+          <a href="https://x.com/deemspace" target="_blank" rel="noopener" aria-label="X"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-6 7H2l8-9L2 2h6l4 6 6-6z"/></svg></a>
+          <a href="https://www.linkedin.com/company/deem-space" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.1c.5-.9 1.8-1.9 3.6-1.9 3.9 0 4.6 2.5 4.6 5.8V21h-4v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 data-en="Visit us">زورونا</h4>
+        <p data-en="Anas Ibn Malik Street, Al Malqa, Riyadh.">شارع أنس بن مالك، حي الملقا، الرياض.</p>
+        <p style="margin-top:8px" data-en="Sun–Thu 9:00–17:00 (Fri–Sat closed)">الأحد–الخميس ٩:٠٠ ص – ٥:٠٠ م (الجمعة والسبت مغلق)</p>
+        <p style="margin-top:8px"><a href="mailto:info@deemspace.com">info@deemspace.com</a></p>
+        <p class="muted" style="color:#9db3aa" data-en="Tel: +966 55 594 4814">هاتف: ٤٨١٤ ٥٩٤ ٥٥ ٩٦٦+</p>
+      </div>
+      <div>
+        <h4 data-en="Location">الموقع</h4>
+        <!-- Replace with the Google Maps iframe for the Al Malqa branch -->
+        <div class="map-ph" id="mapSlot" data-en="Map embed placeholder — replace {{MAP_EMBED}}">مكان خريطة جوجل — استبدل {{MAP_EMBED}}</div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Deem Space. <span data-en="All rights reserved.">جميع الحقوق محفوظة.</span></span>
+      <a href="{{PRIVACY_URL}}" data-en="Privacy note">سياسة الخصوصية</a>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta" id="stickyCta"><a class="btn btn-primary js-scroll" href="#lead-form" data-en="Book a viewing">احجز جولة</a></div>
+
+<script src="script.js" defer></script>
+
+<!-- Design-review Tweaks panel — delete this line (+ tweaks.js) for production -->
+<script src="tweaks.js" defer></script>
+</body>
+</html>

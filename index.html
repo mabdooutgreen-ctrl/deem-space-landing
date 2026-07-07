@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ══════════════════════════════════════════════════════════════
+       PLACEHOLDERS IN THIS FILE (see README.md for the full list):
+       · GTM-XXXXXXX            — 2× (script below + <noscript> after <body>)
+       · https://deemspace.vercel.app — site URL (canonical/OG/hreflang) → your final domain
+       · {{MAP_EMBED}}          — footer Google Maps iframe
+       · {{PRIVACY_URL}}        — footer privacy link
+       · {{GOOGLE_REVIEWS_URL}} — reviews section link
+       · {{LOGO_SVG}}           — official logo (typographic wordmark shipped as fallback)
+       Form endpoint {{SHEET_WEBAPP_URL}} lives in script.js (CONFIG, top of file).
+       ══════════════════════════════════════════════════════════════ -->
+
+  <title>ديم سبيس — مكاتب جاهزة في الملقا، شمال الرياض | احجز جولة</title>
+  <meta name="description" content="مكتب متكامل جاهز للعمل في الملقا شمال الرياض — مفروش بالكامل، مرخّص، وبعقود مرنة. يتّسع حتى ٧٤ موظفًا. احجز جولتك اليوم.">
+
+  <!-- dataLayer init — MUST stay above the GTM snippet -->
+  <script>window.dataLayer = window.dataLayer || [];</script>
+
+  <!-- Google Tag Manager — replace GTM-XXXXXXX (here + in <noscript> below).
+       The snippet no-ops while the ID is still the placeholder. -->
+  <script>
+  (function(w,d,s,l,i){
+    if (i.indexOf('XXXXXXX') > -1) return; /* remove-safe guard: inert until a real ID is set */
+    w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Performance: preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap">
+
+  <!-- SEO / social -->
+  <link rel="canonical" href="https://deemspace.vercel.app/">
+  <link rel="alternate" hreflang="ar" href="https://deemspace.vercel.app/">
+  <link rel="alternate" hreflang="en" href="https://deemspace.vercel.app/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://deemspace.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://deemspace.vercel.app/">
+  <meta property="og:title" content="ديم سبيس — مكاتب جاهزة في الملقا، شمال الرياض">
+  <meta property="og:description" content="مكتب متكامل مفروش ومرخّص بعقود مرنة، يتّسع حتى ٧٤ موظفًا. احجز جولتك اليوم.">
+  <meta property="og:image" content="https://deemspace.vercel.app/assets/og-image.jpg">
+  <meta property="og:locale" content="ar_SA">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#004238">
+  <meta name="format-detection" content="telephone=no"><!-- keep the footer phone non-clickable on iOS -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="top">
+  <!-- Google Tag Manager (noscript) — replace GTM-XXXXXXX -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ═══════════ 0. Header ═══════════ -->
+  <header class="site-header" data-screen-label="Header">
+    <div class="container">
+      <!-- {{LOGO_SVG}}: replace this wordmark with the official logo when available (min-width 120px) -->
+      <a class="brand" href="#top" aria-label="Deem Space"><span class="deem">DEEM</span><span class="space">SPACE</span></a>
+      <div class="header-actions">
+        <button id="langToggle" class="lang-toggle" type="button">English</button>
+        <a class="btn btn-primary btn-sm" href="#lead-form" data-en="Book a viewing">احجز جولة</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════ 1. Hero ═══════════ -->
+    <section class="hero" data-screen-label="Hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" data-en="Premium serviced offices — Al Malqa, North Riyadh">مكاتب مخدومة فاخرة — الملقا، شمال الرياض</p>
+          <h1 data-en="Your office in Al Malqa — ready to work from day one.">مكتبك جاهز للعمل في الملقا — من أول يوم.</h1>
+          <p class="hero-sub" data-en="A fully furnished, licensed workspace for up to 74 people, with flexible terms and a prestige address on Anas Ibn Malik Street — without the long lease or the fit-out bill.">مكتب متكامل مفروش بالكامل ومرخّص، يتّسع حتى ٧٤ موظفًا، بعقود مرنة وموقع مرموق على شارع أنس بن مالك — بدون التزامات إيجار طويلة ولا تكاليف تجهيز.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#lead-form" data-en="Book a viewing">احجز جولة</a>
+            <a class="btn btn-ghost-dark" href="#gallery" data-en="See the offices">شاهد المكاتب</a>
+          </div>
+          <p class="trust-strip" data-en="Licensed by Civil Defense &amp; Municipality • Dedicated parking • 5★ from clients on Google">مرخّص من الدفاع المدني والبلدية • مواقف خاصة • ٥ نجوم من عملائنا على خرائط جوجل</p>
+        </div>
+        <figure class="hero-media">
+          <img src="assets/hero.jpg" width="1000" height="1250" fetchpriority="high" decoding="async"
+               alt="صالة استقبال مضيئة بإطلالة على أفق الرياض من التراس"
+               data-en-alt="Bright lounge with a skyline terrace view over Riyadh">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═══════════ 2. Why Deem Space ═══════════ -->
+    <section class="sec" id="why" data-screen-label="Why Deem Space">
+      <div class="container">
+        <div class="sec-head">
+          <h2 data-en="Why Deem Space?">لماذا ديم سبيس؟</h2>
+        </div>
+        <div class="props-grid">
+          <article class="prop-card">
+            <span class="prop-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span>
+            <h3 data-en="Ready from day one">جاهز من أول يوم</h3>
+            <p data-en="Furnished and IT-ready — move in and work immediately.">مفروش ومجهّز تقنيًا، تنتقل وتبدأ العمل فورًا.</p>
+          </article>
+          <article class="prop-card">
+            <span class="prop-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"></path><path d="m8 8-4 4 4 4"></path><path d="m16 8 4 4-4 4"></path></svg></span>
+            <h3 data-en="Flexible terms">عقود مرنة</h3>
+            <p data-en="Sized to your business — not a five-year trap.">تناسب أعمالك، بدون التزام ٥ سنوات.</p>
+          </article>
+          <article class="prop-card">
+            <span class="prop-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.2c0 4.5-2.9 7.5-7 8.8-4.1-1.3-7-4.3-7-8.8V6l7-3z"></path><path d="m9 12 2 2 4-4.5"></path></svg></span>
+            <h3 data-en="Licensed &amp; safe">مرخّص وآمن</h3>
+            <p data-en="Civil Defense + Municipality licensed, with emergency systems.">الدفاع المدني والبلدية وأنظمة الطوارئ — انتقل باطمئنان.</p>
+          </article>
+          <article class="prop-card">
+            <span class="prop-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19v-4"></path><path d="M10 19v-7"></path><path d="M15 19v-10"></path><path d="M20 19V5"></path></svg></span>
+            <h3 data-en="Grows with you">يكبر معك</h3>
+            <p data-en="A full floor with capacity for up to 74 people.">دور كامل بسعة ٧٤ موظفًا.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 3. Amenities ═══════════ -->
+    <section class="sec band-sand" id="amenities" data-screen-label="Amenities">
+      <div class="container">
+        <div class="sec-head">
+          <h2 data-en="Everything your office includes.">كل ما يحتاجه مكتبك</h2>
+        </div>
+        <ul class="amenities-grid">
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Up to 74 workstations across suites">منطقة عمل تتّسع حتى ٧٤ شخصًا</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Executive suite">مكتب تنفيذي للمدير</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Executive boardroom for 20 (partitionable)">قاعة اجتماعات تنفيذية حتى ٢٠ شخصًا (قابلة للفصل)</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Boardroom for up to 6">قاعة اجتماعات حتى ٦ أشخاص</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Two meeting rooms for up to 4">غرفتا اجتماعات حتى ٤ أشخاص</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="14 private suites, varying capacities">١٤ مكتبًا خاصًا بسعات مختلفة</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Prayer &amp; ablution area">منطقة صلاة ومواضئ</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Operations room">غرفة عمليات</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Two fully-equipped kitchens">مطبخان مجهّزان بالكامل</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Dedicated IT control room">غرفة تقنية معلومات بتحكم مستقل</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Reception, waiting area &amp; lounge">استقبال وانتظار وردهة</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Printing area">منطقة طباعة</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="High-end furniture">أثاث عالي الجودة</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Dedicated parking">مواقف خاصة</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Licensed by Civil Defense &amp; Municipality">مرخّص من الدفاع المدني والبلدية</span></li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Emergency exits, stairs &amp; alarms">مخارج وسلالم طوارئ وأنظمة إنذار</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════ 4. Gallery ═══════════ -->
+    <section class="sec" id="gallery" data-screen-label="Gallery">
+      <div class="container">
+        <div class="sec-head">
+          <h2 data-en="Take a look inside.">جولة داخل المكاتب</h2>
+        </div>
+        <div class="gallery-grid">
+          <figure>
+            <img src="assets/gallery-1.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="قاعة اجتماعات بجدار خشبي ورفوف مضيئة" data-en-alt="Meeting room with a wood feature wall and lit shelving">
+            <figcaption data-en="Meeting room with a view">قاعة اجتماعات بإطلالة</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery-2.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="قاعة مجلس إدارة طويلة بقواطع زجاجية وإطلالة على الأفق" data-en-alt="Long boardroom with glass partitions and a skyline view">
+            <figcaption data-en="The boardroom">قاعة مجلس الإدارة</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery-3.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="قاعة اجتماعات مجهّزة لاستقبال العملاء" data-en-alt="Boardroom set up to welcome clients">
+            <figcaption data-en="Client-ready">جاهزة لاستقبال عملائك</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery-4.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="فاصل رفوف بتصميم أنيق وجلسة استرخاء" data-en-alt="Designer shelving room-divider and lounge seating">
+            <figcaption data-en="Design that helps you focus">تصميم يبعث على التركيز</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery-5.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="غرفة مكالمات خاصة معزولة" data-en-alt="Private phone-booth pod">
+            <figcaption data-en="Private call pods">غرف مكالمات خاصة</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery-6.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="جلسة بجانب التراس بزجاج ممتد من الأرض للسقف وإطلالة على الأفق" data-en-alt="Terrace-side seating with floor-to-ceiling glass and a skyline view">
+            <figcaption data-en="A terrace over the skyline">تراس بإطلالة على الأفق</figcaption>
+          </figure>
+        </div>
+
+        <div class="tour-block">
+          <video controls muted playsinline preload="none"
+                 poster="assets/tour-poster.jpg"
+                 style="display:block; width:100%; max-width:360px; margin-inline:auto; aspect-ratio:9/16; object-fit:cover; border-radius:18px; background:#002E27;">
+            <source src="assets/tour.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <p class="center-cta"><a class="btn btn-primary" href="#lead-form" data-en="Book an in-person viewing">احجز جولة على الطبيعة</a></p>
+      </div>
+    </section>
+
+    <!-- ═══════════ 5. Reviews ═══════════ -->
+    <section class="sec band-sand" id="reviews" data-screen-label="Reviews">
+      <div class="container">
+        <div class="sec-head">
+          <h2 data-en="What visitors say.">ماذا يقول زوّارنا</h2>
+        </div>
+        <div class="reviews-grid">
+          <!-- Real, attributed Google reviews only — do not add invented quotes. -->
+          <article class="review-card">
+            <span class="stars" role="img" aria-label="5/5">★★★★★</span>
+            <!-- AR text is a back-translation of the published review (original is Arabic) — verify wording against the live review before publishing. -->
+            <blockquote data-en="“A unique experience for those seeking tranquillity and a spacious setting. Thank you to the staff.”">«تجربة فريدة لمن يبحث عن الهدوء والمساحة الرحبة. شكرًا للقائمين على المكان.»</blockquote>
+            <div class="reviewer">
+              <strong>Ahmad Alrashed</strong>
+              <span class="review-tag" data-en="Local Guide">مرشد محلي</span>
+            </div>
+            <p class="review-note" data-en="From Google reviews (translated from Arabic)">من مراجعات جوجل</p>
+          </article>
+          <article class="review-card">
+            <span class="stars" role="img" aria-label="5/5">★★★★★</span>
+            <blockquote data-en="5-star rating on Google">تقييم ٥ نجوم على خرائط جوجل</blockquote>
+            <div class="reviewer"><strong>Wadah Alhag</strong></div>
+            <p class="review-note" data-en="Rating only — no written review">تقييم بدون نص</p>
+          </article>
+          <article class="review-card">
+            <span class="stars" role="img" aria-label="5/5">★★★★★</span>
+            <blockquote data-en="5-star rating on Google">تقييم ٥ نجوم على خرائط جوجل</blockquote>
+            <div class="reviewer"><strong>Nasie Saudi</strong></div>
+            <p class="review-note" data-en="Rating only — no written review">تقييم بدون نص</p>
+          </article>
+        </div>
+        <p class="reviews-aggregate">
+          <!-- Verify the live aggregate rating before publishing (see README) -->
+          <a href="{{GOOGLE_REVIEWS_URL}}" target="_blank" rel="noopener" data-en="5.0★ from recent client reviews on Google">٥٫٠ نجوم من مراجعات عملائنا على خرائط جوجل</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════ 6. Lead magnet ═══════════ -->
+    <section class="sec band-green" id="magnet" data-screen-label="Lead magnet">
+      <div class="container magnet-inner">
+        <p class="doc-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"></path><path d="M14 3v4h4"></path></svg><span data-en="A one-page PDF — free with your request">ملف من صفحة واحدة — مجانًا مع طلبك</span></p>
+        <h2 data-en="Get the availability + district map.">احصل على خريطة المواقع والتوافر</h2>
+        <p data-en="Fill in the form and we'll send a one-pager showing exactly where Deem sits on Anas Ibn Malik Street relative to King Salman Rd, Prince Turki Rd and Prince Mohammed bin Abdulaziz Rd — plus which suites are free right now.">عبّئ النموذج ونرسل لك خريطة توضّح موقع ديم على شارع أنس بن مالك بالنسبة لطريق الملك سلمان وطريق الأمير تركي وطريق الأمير محمد بن عبدالعزيز — مع المكاتب المتاحة حاليًا.</p>
+        <a class="btn btn-primary" href="#lead-form" data-en="Send &amp; get the map">أرسل الطلب واحصل على الخريطة</a>
+      </div>
+    </section>
+
+    <!-- ═══════════ 7. Form ═══════════ -->
+    <section class="sec" id="book" data-screen-label="Lead form">
+      <div class="container form-grid">
+        <div class="form-aside">
+          <h2 data-en="Book your viewing.">احجز جولتك</h2>
+          <p class="reassurance" data-en="We reply within business hours • no obligation • your details are used only to contact you about the office.">رد خلال ساعات العمل • بدون التزام • بياناتك تُستخدم للتواصل بخصوص المكتب فقط.</p>
+          <ul>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Licensed by Civil Defense &amp; Municipality">مرخّص من الدفاع المدني والبلدية</span></li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="Dedicated parking for you and your clients">مواقف خاصة لك ولعملائك</span></li>
+            <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m8.5 12.3 2.4 2.4 4.6-5.2"></path></svg></span><span data-en="5★ from clients on Google">٥ نجوم من عملائنا على خرائط جوجل</span></li>
+          </ul>
+        </div>
+
+        <form id="lead-form" class="lead-card" method="post" novalidate>
+          <div id="formFields">
+            <div class="field" id="field-name">
+              <label for="f-name" data-en="Full name">الاسم الكامل</label>
+              <input id="f-name" name="name" type="text" required autocomplete="name"
+                     placeholder="مثال: محمد العتيبي" data-en-placeholder="e.g., Mohammed Alotaibi">
+              <p class="err" role="alert"></p>
+            </div>
+
+            <div class="field" id="field-phone">
+              <label for="f-phone" data-en="Mobile number">رقم الجوال</label>
+              <div class="phone-group">
+                <span class="cc" aria-hidden="true">🇸🇦 +966</span>
+                <input id="f-phone" name="phone" type="tel" required inputmode="numeric" maxlength="14"
+                       autocomplete="tel-national" placeholder="5XXXXXXXX" aria-describedby="phone-help">
+              </div>
+              <p class="help" id="phone-help" data-en="We'll contact you on this number">نتواصل معك على هذا الرقم</p>
+              <p class="err" role="alert"></p>
+            </div>
+
+            <div class="field" id="field-email">
+              <label for="f-email" data-en="Email (optional)">البريد الإلكتروني (اختياري)</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" dir="ltr">
+              <p class="err" role="alert"></p>
+            </div>
+
+            <div class="field" id="field-company">
+              <label for="f-company" data-en="Company name (optional)">اسم الشركة (اختياري)</label>
+              <input id="f-company" name="company" type="text" autocomplete="organization">
+            </div>
+
+            <div class="field" id="field-details">
+              <label for="f-details" data-en="Your question or more details (optional)">سؤالك أو تفاصيل إضافية (اختياري)</label>
+              <textarea id="f-details" name="details" rows="3"></textarea>
+            </div>
+
+            <!-- Honeypot (spam trap): off-screen, ignored by humans -->
+            <div class="hp" aria-hidden="true">
+              <label for="f-website">Website</label>
+              <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <!-- Hidden context fields (filled by script.js) -->
+            <input type="hidden" name="form_location" value="main">
+            <input type="hidden" name="page_url" value="">
+            <input type="hidden" name="utm_source" value="">
+            <input type="hidden" name="utm_medium" value="">
+            <input type="hidden" name="utm_campaign" value="">
+            <input type="hidden" name="utm_term" value="">
+            <input type="hidden" name="utm_content" value="">
+
+            <button id="submitBtn" class="btn btn-primary submit-btn" type="submit">
+              <span class="btn-label" data-en="Send &amp; get the map">أرسل الطلب واحصل على الخريطة</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="form-status" aria-live="polite">
+            <div id="formSuccess" class="status-box status-success" hidden tabindex="-1">
+              <p data-en="Got it ✔ We'll be in touch shortly. Download your availability + district map now.">تم استلام طلبك ✔ بنتواصل معك قريبًا. حمّل خريطة المواقع والتوافر الآن.</p>
+              <a class="btn btn-primary btn-sm" href="assets/deem-space-availability-map.html" target="_blank" rel="noopener" data-en="Download the map (PDF)">تحميل الخريطة (PDF)</a>
+            </div>
+            <div id="formError" class="status-box status-error" hidden>
+              <p data-en="Couldn't send. Please try again.">تعذّر الإرسال. حاول مرة أخرى.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ═══════════ 8. FAQ ═══════════ -->
+    <section class="sec band-sand" id="faq" data-screen-label="FAQ">
+      <div class="container">
+        <div class="sec-head" style="margin-inline: auto; text-align: center;">
+          <h2 data-en="Frequently asked questions">أسئلة شائعة</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary><span data-en="Do serviced offices lock you into rigid, auto-renewing contracts?">هل العقود ملزمة وتتجدد تلقائيًا؟</span><span class="faq-x" aria-hidden="true">+</span></summary>
+            <p class="faq-a" data-en="Our contracts are flexible and sized to your business — scale up or down; we talk terms, not traps.">عقودنا مرنة ومصمّمة على مقاس أعمالك — وسّع أو قلّص متى احتجت؛ نتفاهم على شروط تناسبك، لا التزامات تقيّدك.</p>
+          </details>
+          <details>
+            <summary><span data-en="Isn't a managed office more expensive than a normal lease?">أليس المكتب المُدار أغلى من الإيجار التقليدي؟</span><span class="faq-x" aria-hidden="true">+</span></summary>
+            <p class="faq-a" data-en="One predictable payment replaces rent + fit-out + furniture + IT + maintenance + licensing — usually a lower total cost, and you're productive on day one while North-Riyadh rents keep climbing.">دفعة واحدة متوقعة تغنيك عن الإيجار والتجهيز والأثاث وتقنية المعلومات والصيانة والترخيص — غالبًا تكلفة إجمالية أقل، وفريقك منتج من أول يوم بينما إيجارات شمال الرياض في ارتفاع.</p>
+          </details>
+          <details>
+            <summary><span data-en="Will it actually be ready and compliant?">هل المكتب جاهز ومستوفٍ للاشتراطات فعلًا؟</span><span class="faq-x" aria-hidden="true">+</span></summary>
+            <p class="faq-a" data-en="It's furnished and licensed (Civil Defense + Municipality), with a dedicated IT room and emergency systems — move in and operate.">المكتب مفروش ومرخّص من الدفاع المدني والبلدية، مع غرفة تقنية معلومات مستقلة وأنظمة طوارئ — انتقل وابدأ العمل.</p>
+          </details>
+          <details>
+            <summary><span data-en="Can it hold my whole team — and grow with us?">هل تتّسع لفريقي كاملًا وتكبر معنا؟</span><span class="faq-x" aria-hidden="true">+</span></summary>
+            <p class="faq-a" data-en="Up to 74 workstations across 14 private offices plus an executive suite — and capacity can grow by adding offices in the common area.">حتى ٧٤ محطة عمل في ١٤ مكتبًا خاصًا إضافةً إلى جناح تنفيذي، والمكان قابل لزيادة العدد عبر إضافة مكاتب في المنطقة العامة.</p>
+          </details>
+          <details>
+            <summary><span data-en="Is the location really convenient and prestigious?">هل الموقع فعلًا مرموق وسهل الوصول؟</span><span class="faq-x" aria-hidden="true">+</span></summary>
+            <p class="faq-a" data-en="Al Malqa, on Anas Ibn Malik St — minutes from King Salman Rd, Prince Turki bin Abdulaziz Rd and Prince Mohammed bin Abdulaziz Rd, with dedicated parking.">في الملقا على شارع أنس بن مالك — دقائق عن طريق الملك سلمان وطريق الأمير تركي بن عبدالعزيز وطريق الأمير محمد بن عبدالعزيز، مع مواقف خاصة.</p>
+          </details>
+          <details>
+            <summary><span data-en="Can I see it before committing?">هل أقدر أشوف المكتب قبل أي التزام؟</span><span class="faq-x" aria-hidden="true">+</span></summary>
+            <p class="faq-a" data-en="Yes — submit the form, get the availability + district map, and we'll arrange a viewing at a time that suits you.">أكيد — أرسل النموذج، واستلم خريطة المواقع والتوافر، وننسّق لك جولة في الوقت اللي يناسبك.</p>
+          </details>
+        </div>
+        <div class="faq-cta">
+          <p data-en="Another question? Book a viewing and we'll answer in person.">عندك سؤال ثاني؟ احجز جولة ونجاوبك على الطبيعة.</p>
+          <a class="btn btn-primary" href="#lead-form" data-en="Book a viewing">احجز جولة</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ 9. Final CTA ═══════════ -->
+    <section class="sec band-green final-band" data-screen-label="Final CTA">
+      <div class="container">
+        <h2 data-en="Ready to see your new office in Al Malqa?">جاهز تشوف مكتبك الجديد في الملقا؟</h2>
+        <a class="btn btn-primary" href="#lead-form" data-en="Book a viewing now">احجز جولة الآن</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════ 10. Footer ═══════════ -->
+  <footer class="site-footer" data-screen-label="Footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <!-- {{LOGO_SVG}}: swap for the official on-dark lockup when available -->
+          <p class="brand"><span class="deem">DEEM</span><span class="space">SPACE</span></p>
+          <p data-en="Deem Space — part of Al Manahil Welfare Foundation's SME-enablement initiative.">ديم سبيس — مساحات ديم، ضمن مبادرة مؤسسة المناهل الخيرية لتمكين المنشآت الصغيرة والمتوسطة.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/deem_space" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@deem_space" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://x.com/deemspace" target="_blank" rel="noopener">X</a>
+            <a href="https://www.linkedin.com/company/deem-space" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 data-en="Contact">التواصل</h3>
+          <p data-en="Anas Ibn Malik Street, Al Malqa, Riyadh.">شارع أنس بن مالك، حي الملقا، الرياض</p>
+          <p data-en="Sun–Thu 9:00–17:00 (Fri–Sat closed).">الأحد–الخميس ٩:٠٠ ص – ٥:٠٠ م (الجمعة والسبت مغلق)</p>
+          <!-- Plain, non-clickable phone (legitimacy only — deliberately NOT a call CTA) -->
+          <p><span dir="ltr">+966 11 500 1673</span></p>
+        </div>
+        <div class="footer-col">
+          <h3 data-en="Location">الموقع</h3>
+          <!-- {{MAP_EMBED}}: paste the Google Maps <iframe> for the Al Malqa branch here,
+               replacing the placeholder box below.
+               Google Maps → Share → Embed a map → copy HTML. -->
+          <div class="map-ph">{{MAP_EMBED}}<br>Google Maps iframe — Al Malqa branch</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          <span data-en="We respect your privacy. Your data is used only to contact you about this offer.">نحترم خصوصيتك. تُستخدم بياناتك للتواصل معك بخصوص هذا العرض فقط.</span>
+          <a href="{{PRIVACY_URL}}" data-en="See our privacy note.">اطّلع على سياسة الخصوصية.</a>
+        </p>
+        <p>© <span id="yy">2026</span> Deem Space</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky mobile CTA (hidden while the form section is in view) -->
+  <div class="sticky-cta" id="stickyCta">
+    <a class="btn btn-primary" href="#lead-form" data-en="Book a viewing">احجز جولة</a>
+  </div>
+</body>
+</html>

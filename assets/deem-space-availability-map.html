@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ديم سبيس الملقا — خريطة المواقع والتوافر | Availability &amp; District Map</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap">
+<!-- ═══════════════════════════════════════════════════════════
+     DEEM TEAM — KEEP THIS PAGE CURRENT:
+     1. Replace {{AVAIL_DATE}} (2 places) with today's date.
+     2. Edit the availability table rows below (search "EDIT ROWS").
+     This page is the lead magnet: leads open it from the form's
+     success message and save it as a PDF via the print button.
+     ═══════════════════════════════════════════════════════════ -->
+<style>
+  :root {
+    --green-900:#0A2C21; --green-800:#0E3B2C; --green-600:#16543E; --green-400:#2E8266;
+    --orange-500:#EE6C1E; --orange-600:#D65E14; --terracotta:#B4664C;
+    --sand:#F4EEE3; --cream:#FAF7F1; --ink:#12241D; --body:#33413B; --muted:#6B7A73; --line:#E4E0D5;
+    --success:#1B7A4B; --success-bg:#E7F3EC;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #E9E4D8; color: var(--body);
+    font-family: 'Tajawal', system-ui, sans-serif; line-height: 1.75; font-size: 15px;
+  }
+  a { color: var(--orange-600); }
+  a:hover { color: var(--green-800); }
+  .page {
+    max-width: 820px; margin: 24px auto; background: var(--cream);
+    padding: 34px 40px 28px; box-shadow: 0 12px 34px rgba(14,59,44,.14);
+  }
+  .en { font-family: 'Manrope', sans-serif; color: var(--muted); font-size: .82em; }
+  header.doc { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; border-bottom: 3px solid var(--green-800); padding-bottom: 14px; }
+  .wordmark { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.3rem; letter-spacing: .06em; white-space: nowrap; }
+  .wordmark .d { color: var(--orange-500); } .wordmark .s { color: var(--green-800); }
+  h1 { font-size: 1.35rem; color: var(--ink); margin: 0; line-height: 1.5; }
+  h1 .en { display: block; font-weight: 600; }
+  .stamp {
+    background: var(--sand); border: 1px solid var(--line); border-radius: 999px;
+    font-size: .8rem; font-weight: 700; color: var(--green-800); padding: 4px 14px; white-space: nowrap;
+  }
+  h2 { font-size: 1.05rem; color: var(--green-800); margin: 26px 0 10px; }
+  h2 .en { font-weight: 600; }
+  .mapbox { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; }
+  .mapnote { font-size: .78rem; color: var(--muted); margin-top: 6px; }
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  th { text-align: start; background: var(--green-800); color: #fff; font-weight: 700; padding: 8px 12px; }
+  th .en { color: rgba(255,255,255,.75); }
+  td { padding: 8px 12px; border-bottom: 1px solid var(--line); color: var(--ink); }
+  tr:nth-child(even) td { background: #fff; }
+  .pill { display: inline-block; border-radius: 999px; padding: 1px 12px; font-size: .8rem; font-weight: 700; }
+  .p-avail { background: var(--success-bg); color: var(--success); }
+  .p-limited { background: #F9EAE3; color: var(--terracotta); }
+  .p-leased { background: #EDEBE4; color: var(--muted); }
+  ul.inc { margin: 6px 0 0; padding: 0; list-style: none; columns: 2; column-gap: 32px; }
+  ul.inc li { margin-bottom: 6px; padding-inline-start: 18px; position: relative; color: var(--ink); break-inside: avoid; }
+  ul.inc li::before { content: "✓"; position: absolute; inset-inline-start: 0; color: var(--green-400); font-weight: 700; }
+  .nudge {
+    margin-top: 26px; background: var(--green-800); color: #fff; border-radius: 12px;
+    padding: 16px 22px; display: flex; justify-content: space-between; gap: 14px; align-items: center; flex-wrap: wrap;
+  }
+  .nudge p { margin: 0; }
+  .nudge .en { color: rgba(255,255,255,.72); }
+  .nudge strong { color: #fff; }
+  .nudge a.btn { background: var(--orange-500); color: #fff; text-decoration: none; font-weight: 700; border-radius: 999px; padding: 9px 22px; white-space: nowrap; }
+  footer.doc { margin-top: 22px; padding-top: 12px; border-top: 1px solid var(--line); font-size: .78rem; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .printbar { position: fixed; top: 14px; inset-inline-end: 14px; z-index: 10; }
+  .printbar button {
+    font: inherit; font-weight: 700; cursor: pointer; border: 0; border-radius: 999px;
+    background: var(--orange-500); color: #fff; padding: 11px 24px; box-shadow: 0 8px 22px rgba(238,108,30,.35);
+  }
+  .printbar button:hover { background: var(--orange-600); }
+  @page { size: A4; margin: 11mm; }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; max-width: none; box-shadow: none; padding: 0; }
+    .printbar { display: none; }
+    .nudge { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  @media (max-width: 640px) { .page { padding: 22px 18px; margin: 10px; } ul.inc { columns: 1; } }
+</style>
+</head>
+<body>
+<div class="printbar"><button type="button" onclick="window.print()">حفظ PDF / Save as PDF</button></div>
+
+<div class="page">
+  <header class="doc">
+    <div>
+      <p class="wordmark" style="margin:0 0 6px;"><span class="d">DEEM</span> <span class="s">SPACE</span></p>
+      <h1>خريطة المواقع والتوافر — ديم سبيس الملقا
+        <span class="en">Deem Space Al Malqa — Availability &amp; District Map</span>
+      </h1>
+    </div>
+    <span class="stamp">كما في {{AVAIL_DATE}}</span>
+  </header>
+
+  <h2>أين نقع؟ <span class="en">/ Where we are</span></h2>
+  <div class="mapbox">
+    <!-- Schematic district map — live SVG text (Arabic renders natively; nothing baked into an image) -->
+    <svg viewBox="0 0 760 440" role="img" aria-label="خريطة توضيحية لموقع ديم سبيس في الملقا"
+         style="display:block; width:100%; height:auto; background:#FAF7F1;"
+         font-family="Tajawal, sans-serif">
+      <!-- district tint: Al Malqa -->
+      <rect x="42" y="80" width="190" height="180" rx="14" fill="rgba(46,130,102,0.09)"></rect>
+      <!-- roads -->
+      <line x1="28" y1="200" x2="732" y2="200" stroke="#16543E" stroke-width="10" stroke-linecap="round"></line>
+      <line x1="28" y1="336" x2="732" y2="336" stroke="#2E8266" stroke-width="8" stroke-linecap="round"></line>
+      <line x1="252" y1="66" x2="252" y2="392" stroke="#2E8266" stroke-width="8" stroke-linecap="round"></line>
+      <line x1="540" y1="66" x2="540" y2="392" stroke="#2E8266" stroke-width="8" stroke-linecap="round"></line>
+      <!-- road labels -->
+      <text x="392" y="184" text-anchor="middle" font-size="17" font-weight="700" fill="#0E3B2C">شارع أنس بن مالك · Anas Ibn Malik St</text>
+      <text x="392" y="322" text-anchor="middle" font-size="15" fill="#33413B">طريق الملك سلمان · King Salman Rd</text>
+      <text x="252" y="48" text-anchor="middle" font-size="14" fill="#33413B">طريق الأمير تركي بن عبدالعزيز · Prince Turki Rd</text>
+      <text x="540" y="428" text-anchor="middle" font-size="14" fill="#33413B">طريق الأمير محمد بن عبدالعزيز · Prince Mohammed Rd</text>
+      <!-- Deem Space marker -->
+      <circle cx="140" cy="200" r="19" fill="none" stroke="#EE6C1E" stroke-width="2" opacity="0.55"></circle>
+      <circle cx="140" cy="200" r="11" fill="#EE6C1E"></circle>
+      <text x="140" y="160" text-anchor="middle" font-size="17" font-weight="800" fill="#D65E14">ديم سبيس · DEEM SPACE</text>
+      <!-- district labels -->
+      <text x="137" y="248" text-anchor="middle" font-size="16" font-weight="700" fill="#0E3B2C">الملقا · Al Malqa</text>
+      <text x="140" y="380" text-anchor="middle" font-size="14" fill="#6B7A73">حطين · Hittin</text>
+      <text x="396" y="380" text-anchor="middle" font-size="14" fill="#6B7A73">العقيق · Al Aqiq</text>
+      <text x="396" y="100" text-anchor="middle" font-size="14" fill="#6B7A73">الياسمين · Al Yasmin</text>
+      <text x="648" y="100" text-anchor="middle" font-size="14" fill="#6B7A73">النرجس · Al Narjis</text>
+      <text x="648" y="270" text-anchor="middle" font-size="14" fill="#6B7A73">الصحافة · Al Sahafah</text>
+      <!-- north -->
+      <text x="710" y="52" text-anchor="middle" font-size="15" fill="#6B7A73">شمال ↑ N</text>
+    </svg>
+  </div>
+  <p class="mapnote">خريطة توضيحية — ليست بمقياس رسم. <span class="en">Schematic map — not to scale.</span></p>
+
+  <h2>المكاتب المتاحة حاليًا <span class="en">/ Current availability</span></h2>
+  <table>
+    <thead>
+      <tr>
+        <th>النوع <span class="en">Type</span></th>
+        <th>السعة <span class="en">Capacity</span></th>
+        <th>الحالة <span class="en">Status</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- ▼▼ EDIT ROWS — placeholder snapshot; the Deem team keeps this current ▼▼ -->
+      <tr><td>مكتب خاص <span class="en">Private suite</span></td><td>٢–٣ <span class="en">2–3</span></td><td><span class="pill p-avail">متاح · Available</span></td></tr>
+      <tr><td>مكتب خاص <span class="en">Private suite</span></td><td>٤–٦ <span class="en">4–6</span></td><td><span class="pill p-avail">متاح · Available</span></td></tr>
+      <tr><td>مكتب خاص <span class="en">Private suite</span></td><td>٨+ <span class="en">8+</span></td><td><span class="pill p-limited">محدود · Limited</span></td></tr>
+      <tr><td>الجناح التنفيذي <span class="en">Executive suite</span></td><td>١ <span class="en">1</span></td><td><span class="pill p-limited">محدود · Limited</span></td></tr>
+      <tr><td>دور كامل <span class="en">Full floor</span></td><td>حتى ٧٤ <span class="en">up to 74</span></td><td><span class="pill p-limited">محدود · Limited</span></td></tr>
+      <!-- ▲▲ EDIT ROWS ▲▲ -->
+    </tbody>
+  </table>
+
+  <h2>ماذا يشمل مكتبك؟ <span class="en">/ What's included</span></h2>
+  <ul class="inc">
+    <li>مفروش ومجهّز تقنيًا بالكامل <span class="en">Fully furnished &amp; IT-ready</span></li>
+    <li>قاعات اجتماعات (حتى ٢٠ شخصًا) <span class="en">Meeting rooms incl. boardroom for 20</span></li>
+    <li>استقبال وردهة وضيافة <span class="en">Reception, lounge &amp; two kitchens</span></li>
+    <li>منطقة صلاة ومواضئ <span class="en">Prayer &amp; ablution area</span></li>
+    <li>مواقف خاصة <span class="en">Dedicated parking</span></li>
+    <li>مرخّص من الدفاع المدني والبلدية <span class="en">Civil Defense &amp; Municipality licensed</span></li>
+  </ul>
+
+  <div class="nudge">
+    <p><strong>جاهز للجولة؟</strong> عبّئ نموذج الحجز في صفحة ديم سبيس وننسّق لك موعدًا.
+      <span class="en">Ready for a viewing? Use the booking form on the Deem Space page.</span></p>
+    <a class="btn" href="../index.html#lead-form">احجز جولة</a>
+  </div>
+
+  <footer class="doc">
+    <span>ديم سبيس — شارع أنس بن مالك، حي الملقا، الرياض · info@deemspace.com</span>
+    <span>التوافر كما في {{AVAIL_DATE}} — يُحدَّث من فريق ديم <span class="en">Availability as of {{AVAIL_DATE}}</span></span>
+  </footer>
+</div>
+</body>
+</html>

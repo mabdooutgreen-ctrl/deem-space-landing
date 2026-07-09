@@ -7,8 +7,6 @@
        PLACEHOLDERS IN THIS FILE (see README.md for the full list):
        · GTM-N5QVCQDM            — 2× (script below + <noscript> after <body>)
        · https://deemspace.vercel.app — site URL (canonical/OG/hreflang) → your final domain
-       · {{PRIVACY_URL}}        — footer privacy link
-       · {{GOOGLE_REVIEWS_URL}} — reviews section link
        · {{LOGO_SVG}}           — official logo (typographic wordmark shipped as fallback)
        Form endpoint {{SHEET_WEBAPP_URL}} lives in script.js (CONFIG, top of file).
        ══════════════════════════════════════════════════════════════ -->
@@ -234,7 +232,7 @@
         </div>
         <p class="reviews-aggregate">
           <!-- Verify the live aggregate rating before publishing (see README) -->
-          <a href="{{GOOGLE_REVIEWS_URL}}" target="_blank" rel="noopener" data-en="5.0★ from recent client reviews on Google">٥٫٠ نجوم من مراجعات عملائنا على خرائط جوجل</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=24.8010316%2C46.5994964" target="_blank" rel="noopener" data-en="5.0★ from recent client reviews on Google">٥٫٠ نجوم من مراجعات عملائنا على خرائط جوجل</a>
         </p>
       </div>
     </section>
@@ -399,8 +397,10 @@
           <h3 data-en="Contact">التواصل</h3>
           <p data-en="Anas Ibn Malik Street, Al Malqa, Riyadh.">شارع أنس بن مالك، حي الملقا، الرياض</p>
           <p data-en="Sun–Thu 9:00–17:00 (Fri–Sat closed).">الأحد–الخميس ٩:٠٠ ص – ٥:٠٠ م (الجمعة والسبت مغلق)</p>
-          <!-- Plain, non-clickable phone (legitimacy only — deliberately NOT a call CTA) -->
-          <p class="footer-phone"><span dir="ltr">+966 11 500 1673</span></p>
+          <!-- Click-to-call → fires `call_click` (Google Ads "Contact", SECONDARY conversion) -->
+          <p class="footer-phone">
+            <a id="callLink" href="tel:+966115001673" dir="ltr" aria-label="Call Deem Space">+966 11 500 1673</a>
+          </p>
         </div>
         <div class="footer-col">
           <h3 data-en="Location">الموقع</h3>
@@ -408,12 +408,19 @@
                   title="Deem Space — Al Malqa, Riyadh"
                   allowfullscreen="" loading="lazy"
                   referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <!-- Directions → fires `get_directions` (Google Ads "Get directions", SECONDARY) -->
+          <p class="footer-directions">
+            <a id="directionsLink"
+               href="https://www.google.com/maps/dir/?api=1&amp;destination=24.8010316%2C46.5994964"
+               target="_blank" rel="noopener"
+               data-en="Get directions →">احصل على الاتجاهات ←</a>
+          </p>
         </div>
       </div>
       <div class="footer-bottom">
         <p>
           <span data-en="We respect your privacy. Your data is used only to contact you about this offer.">نحترم خصوصيتك. تُستخدم بياناتك للتواصل معك بخصوص هذا العرض فقط.</span>
-          <a href="{{PRIVACY_URL}}" data-en="See our privacy note.">اطّلع على سياسة الخصوصية.</a>
+          <a href="privacy.html" data-en="See our privacy note.">اطّلع على سياسة الخصوصية.</a>
         </p>
         <p>© <span id="yy">2026</span> Deem Space</p>
       </div>

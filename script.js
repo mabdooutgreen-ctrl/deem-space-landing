@@ -103,6 +103,15 @@ var CONFIG = {
   if (params.get('lang') === 'en') setLang('en');
   else if (toggleBtn) toggleBtn.textContent = META.ar.toggleLabel;
 
+  /* ---------- Click-ID capture (Google + Snapchat) ---------- */
+  // gclid = Search/Display · gbraid/wbraid = iOS privacy-safe click IDs · ScCid = Snapchat
+  var CLICK_IDS = {
+    gclid:  params.get('gclid')  || '',
+    gbraid: params.get('gbraid') || '',
+    wbraid: params.get('wbraid') || '',
+    sccid:  params.get('ScCid')  || params.get('sccid') || ''
+  };
+
   /* ---------- UTM capture → hidden inputs ---------- */
 
   var form = doc.getElementById('lead-form');
@@ -166,6 +175,36 @@ var CONFIG = {
     }
   }
 
+  /* ---------- tracking helpers ---------- */
+
+  // Unique id per submission: dedupes Google/Snap, and is the key you'd
+  // reuse if a server-side (CAPI) feed is ever added.
+  function newEventId() {
+    try {
+      if (window.crypto && window.crypto.randomUUID) return window.crypto.randomUUID();
+    } catch (e) {}
+    return 'ev-' + Date.now() + '-' + Math.random().toString(16).slice(2, 10);
+  }
+
+  // Enhanced Conversions matches better on first/last name than one blob.
+  function splitName(full) {
+    var parts = String(full || '').trim().split(/\s+/).filter(Boolean);
+    if (!parts.length) return { first: '', last: '' };
+    if (parts.length === 1) return { first: parts[0], last: '' };
+    return { first: parts[0], last: parts.slice(1).join(' ') };
+  }
+
+  // Relative lead score -> conversion value. Teaches Smart Bidding / Snap
+  // which leads are worth more. Swap for real economics when Deem knows
+  // its lease value x close rate.
+  function leadValue(p) {
+    var v = 100;                       // any valid lead
+    if (p.company) v += 50;            // named company = qualified B2B
+    if (p.email)   v += 25;            // gave optional email
+    if (p.details) v += 25;            // wrote a real enquiry
+    return v;                          // 100 .. 200
+  }
+
   function endpointConfigured() {
     var u = CONFIG.SHEET_WEBAPP_URL || '';
     return u && u.indexOf('{{') === -1;
@@ -198,20 +237,38 @@ var CONFIG = {
 
     function pushLeadEvent(p) {
       window.dataLayer = window.dataLayer || [];
-      // The ONLY tracking event. GTM (Google tag / Snap pixel) does all
-      // hashing — push the RAW normalized phone + raw lowercased email.
+      var n = splitName(p.name);
+      // GTM (Google tag / Snap pixel) does ALL hashing — push RAW normalized
+      // phone + raw lowercased email. Never pre-hash here.
       window.dataLayer.push({
         event: 'lead_form_submit',
+        event_id: p.event_id,                  // dedupe + CAPI-ready
         form_location: p.form_location,        // 'hero' | 'main' | 'footer'
         company: p.company || '',
+        value: p.lead_value,                   // relative lead quality
+        currency: 'SAR',
         lead: {
           phone_number: p.phone,               // '+9665XXXXXXXX' — primary match key
           email: p.email || '',
-          first_name: p.name,
+          first_name: n.first,
+          last_name: n.last,
           country: 'SA'
         }
       });
     }
+
+    // Micro-conversion: the visitor engaged with the form. At low volume this
+    // is the signal Smart Bidding can actually learn from, and it shows where
+    // people abandon.
+    var formStarted = false;
+    function pushFormStart() {
+      if (formStarted) return;
+      formStarted = true;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'form_start', form_location: 'main' });
+    }
+    form.addEventListener('focusin', pushFormStart, { once: false });
+    form.addEventListener('input', pushFormStart, { once: false });
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -260,8 +317,12 @@ var CONFIG = {
         utm_campaign: form.elements.utm_campaign.value,
         utm_term: form.elements.utm_term.value,
         utm_content: form.elements.utm_content.value,
+        gclid: CLICK_IDS.gclid || CLICK_IDS.gbraid || CLICK_IDS.wbraid,
+        sccid: CLICK_IDS.sccid,
         lang: lang
       };
+      payload.event_id = newEventId();
+      payload.lead_value = leadValue(payload);
 
       setLoading(true);
 
@@ -293,6 +354,44 @@ var CONFIG = {
         if (res.ok || res.type === 'opaque') succeed();
         else fail();
       }).catch(fail);
+    });
+  }
+
+  /* ---------- engagement signals (free retargeting audiences) ---------- */
+  // Someone who watched the tour or opened the availability map is a warm
+  // visitor. These feed GA4/Snap audiences and give Ads more to optimise on.
+  var tour = doc.querySelector('.tour-block video');
+  if (tour) {
+    tour.addEventListener('play', function () {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'video_play', video_name: 'office_tour' });
+    }, { once: true });
+  }
+
+  var magnet = doc.querySelector('#formSuccess a[href*="availability-map"]');
+  if (magnet) {
+    magnet.addEventListener('click', function () {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'magnet_open', magnet_name: 'availability_map' });
+    });
+  }
+
+  /* ---------- secondary conversions: call + directions ---------- */
+  // These leads never reach the Sheet and can't feed Enhanced Conversions,
+  // so keep them SECONDARY in Google Ads. Never primary.
+  var callLink = doc.getElementById('callLink');
+  if (callLink) {
+    callLink.addEventListener('click', function () {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'call_click', cta_location: 'footer' });
+    });
+  }
+
+  var dirLink = doc.getElementById('directionsLink');
+  if (dirLink) {
+    dirLink.addEventListener('click', function () {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'get_directions', cta_location: 'footer' });
     });
   }
 

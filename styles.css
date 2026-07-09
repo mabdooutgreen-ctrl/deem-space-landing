@@ -366,6 +366,20 @@ html[dir="rtl"] .video-slot .slot-note { transform: translate(50%, -50%); }
 }
 .site-footer iframe { width: 100%; height: 220px; border: 0; border-radius: 12px; }
 /* Large, prominent footer phone number */
+.site-footer .footer-phone a {
+  color: inherit; text-decoration: none; border-bottom: 2px solid transparent;
+  transition: border-color .15s ease;
+}
+.site-footer .footer-phone a:hover,
+.site-footer .footer-phone a:focus-visible { border-bottom-color: currentColor; }
+
+.site-footer .footer-directions { margin-block-start: 10px; }
+.site-footer .footer-directions a {
+  color: var(--orange-300); font-weight: 700; font-size: 0.95rem; text-decoration: none;
+}
+.site-footer .footer-directions a:hover,
+.site-footer .footer-directions a:focus-visible { text-decoration: underline; }
+
 .site-footer .footer-phone {
   font-size: clamp(1.5rem, 4.2vw, 2rem);
   font-weight: 800;

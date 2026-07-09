@@ -7,13 +7,13 @@ var CONFIG = {
   // Google Apps Script Web App URL (or Sheets connector endpoint).
   // The form POSTs its JSON payload here → appends a row to the Sheet.
   // See README.md → "Wire the form to Google Sheets".
-  SHEET_WEBAPP_URL: '{{SHEET_WEBAPP_URL}}',
+  SHEET_WEBAPP_URL: 'https://script.google.com/macros/s/AKfycbxpMn44ba5xCNh6Yn3oM3dCgpeh-OolslKZg6vkwUVatqBgYPhLEKzOspXI6IBOWAeI2Q/exec',
 
   // While the URL above is still a placeholder, submits are SIMULATED
   // (success UI + dataLayer fire, nothing is saved) so you can test the
   // page and GTM preview before wiring the Sheet. Set to false to make
   // an unconfigured endpoint show the error state instead.
-  SIMULATE_WHEN_UNCONFIGURED: true
+  SIMULATE_WHEN_UNCONFIGURED: false
 };
 /* ============================================================ */
 

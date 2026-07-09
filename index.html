@@ -17,6 +17,49 @@
   <!-- dataLayer init — MUST stay above the GTM snippet -->
   <script>window.dataLayer = window.dataLayer || [];</script>
 
+  <!-- ══════════════════════════════════════════════════════════════
+       Google Consent Mode v2 — MUST run before the GTM snippet below.
+       Region-scoped: EEA/UK/CH default to DENIED (we do not advertise
+       there, so no cookie banner is needed). Everywhere else — including
+       Saudi Arabia — defaults to GRANTED, so Enhanced Conversions and
+       Snap Advanced Matching receive full signal with zero data loss.
+       ══════════════════════════════════════════════════════════════ -->
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+
+  // 1) EEA + UK + Switzerland → denied by default (region rules win)
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied',
+    functionality_storage: 'denied',
+    personalization_storage: 'denied',
+    security_storage: 'granted',
+    region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU',
+             'IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO',
+             'SK','SI','ES','SE','GB','CH']
+  });
+
+  // 2) Everywhere else (KSA + GCC + rest of world) → granted
+  gtag('consent', 'default', {
+    ad_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+    analytics_storage: 'granted',
+    functionality_storage: 'granted',
+    personalization_storage: 'granted',
+    security_storage: 'granted'
+  });
+
+  // Redact ad identifiers only where consent is denied; keep gclid usable
+  // via the URL when cookies can't be written.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+  </script>
+  <!-- End Consent Mode v2 -->
+
   <!-- Google Tag Manager — replace GTM-N5QVCQDM (here + in <noscript> below).
        The snippet no-ops while the ID is still the placeholder. -->
   <script>

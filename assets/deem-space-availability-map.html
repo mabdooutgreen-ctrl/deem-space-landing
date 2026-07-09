@@ -11,16 +11,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Tajawal:wght@400;500;700;800&amp;display=swap">
 <!-- ═══════════════════════════════════════════════════════════
      DEEM TEAM — KEEP THIS PAGE CURRENT:
-     1. Replace {{AVAIL_DATE}} (2 places) with today's date.
+     1. Replace يوليو ٢٠٢٦ / July 2026 (2 places) with today's date.
      2. Edit the availability table rows below (search "EDIT ROWS").
      This page is the lead magnet: leads open it from the form's
      success message and save it as a PDF via the print button.
      ═══════════════════════════════════════════════════════════ -->
 <style>
   :root {
-    --green-900:#0A2C21; --green-800:#0E3B2C; --green-600:#16543E; --green-400:#2E8266;
-    --orange-500:#EE6C1E; --orange-600:#D65E14; --terracotta:#B4664C;
-    --sand:#F4EEE3; --cream:#FAF7F1; --ink:#12241D; --body:#33413B; --muted:#6B7A73; --line:#E4E0D5;
+    --green-900:#002E27; --green-800:#004238; --green-600:#0A5A49; --green-400:#4E9583;
+    --orange-500:#726944; --orange-600:#5E5637; --terracotta:#8C6A3F;
+    --sand:#F1ECDF; --cream:#FAF7F1; --ink:#1C2D3C; --body:#3A3A33; --muted:#857F72; --line:#E4E0D5;
     --success:#1B7A4B; --success-bg:#E7F3EC;
   }
   * { box-sizing: border-box; }
@@ -55,7 +55,7 @@
   tr:nth-child(even) td { background: #fff; }
   .pill { display: inline-block; border-radius: 999px; padding: 1px 12px; font-size: .8rem; font-weight: 700; }
   .p-avail { background: var(--success-bg); color: var(--success); }
-  .p-limited { background: #F9EAE3; color: var(--terracotta); }
+  .p-limited { background: #F2EEE2; color: var(--terracotta); }
   .p-leased { background: #EDEBE4; color: var(--muted); }
   ul.inc { margin: 6px 0 0; padding: 0; list-style: none; columns: 2; column-gap: 32px; }
   ul.inc li { margin-bottom: 6px; padding-inline-start: 18px; position: relative; color: var(--ink); break-inside: avoid; }
@@ -96,7 +96,7 @@
         <span class="en">Deem Space Al Malqa — Availability &amp; District Map</span>
       </h1>
     </div>
-    <span class="stamp">كما في {{AVAIL_DATE}}</span>
+    <span class="stamp">كما في يوليو ٢٠٢٦ / July 2026</span>
   </header>
 
   <h2>أين نقع؟ <span class="en">/ Where we are</span></h2>
@@ -108,28 +108,28 @@
       <!-- district tint: Al Malqa -->
       <rect x="42" y="80" width="190" height="180" rx="14" fill="rgba(46,130,102,0.09)"></rect>
       <!-- roads -->
-      <line x1="28" y1="200" x2="732" y2="200" stroke="#16543E" stroke-width="10" stroke-linecap="round"></line>
-      <line x1="28" y1="336" x2="732" y2="336" stroke="#2E8266" stroke-width="8" stroke-linecap="round"></line>
-      <line x1="252" y1="66" x2="252" y2="392" stroke="#2E8266" stroke-width="8" stroke-linecap="round"></line>
-      <line x1="540" y1="66" x2="540" y2="392" stroke="#2E8266" stroke-width="8" stroke-linecap="round"></line>
+      <line x1="28" y1="200" x2="732" y2="200" stroke="#0A5A49" stroke-width="10" stroke-linecap="round"></line>
+      <line x1="28" y1="336" x2="732" y2="336" stroke="#4E9583" stroke-width="8" stroke-linecap="round"></line>
+      <line x1="252" y1="66" x2="252" y2="392" stroke="#4E9583" stroke-width="8" stroke-linecap="round"></line>
+      <line x1="540" y1="66" x2="540" y2="392" stroke="#4E9583" stroke-width="8" stroke-linecap="round"></line>
       <!-- road labels -->
-      <text x="392" y="184" text-anchor="middle" font-size="17" font-weight="700" fill="#0E3B2C">شارع أنس بن مالك · Anas Ibn Malik St</text>
-      <text x="392" y="322" text-anchor="middle" font-size="15" fill="#33413B">طريق الملك سلمان · King Salman Rd</text>
-      <text x="252" y="48" text-anchor="middle" font-size="14" fill="#33413B">طريق الأمير تركي بن عبدالعزيز · Prince Turki Rd</text>
-      <text x="540" y="428" text-anchor="middle" font-size="14" fill="#33413B">طريق الأمير محمد بن عبدالعزيز · Prince Mohammed Rd</text>
+      <text x="392" y="184" text-anchor="middle" font-size="17" font-weight="700" fill="#004238">شارع أنس بن مالك · Anas Ibn Malik St</text>
+      <text x="392" y="322" text-anchor="middle" font-size="15" fill="#3A3A33">طريق الملك سلمان · King Salman Rd</text>
+      <text x="252" y="48" text-anchor="middle" font-size="14" fill="#3A3A33">طريق الأمير تركي بن عبدالعزيز · Prince Turki Rd</text>
+      <text x="540" y="428" text-anchor="middle" font-size="14" fill="#3A3A33">طريق الأمير محمد بن عبدالعزيز · Prince Mohammed Rd</text>
       <!-- Deem Space marker -->
-      <circle cx="140" cy="200" r="19" fill="none" stroke="#EE6C1E" stroke-width="2" opacity="0.55"></circle>
-      <circle cx="140" cy="200" r="11" fill="#EE6C1E"></circle>
-      <text x="140" y="160" text-anchor="middle" font-size="17" font-weight="800" fill="#D65E14">ديم سبيس · DEEM SPACE</text>
+      <circle cx="140" cy="200" r="19" fill="none" stroke="#726944" stroke-width="2" opacity="0.55"></circle>
+      <circle cx="140" cy="200" r="11" fill="#726944"></circle>
+      <text x="140" y="160" text-anchor="middle" font-size="17" font-weight="800" fill="#5E5637">ديم سبيس · DEEM SPACE</text>
       <!-- district labels -->
-      <text x="137" y="248" text-anchor="middle" font-size="16" font-weight="700" fill="#0E3B2C">الملقا · Al Malqa</text>
-      <text x="140" y="380" text-anchor="middle" font-size="14" fill="#6B7A73">حطين · Hittin</text>
-      <text x="396" y="380" text-anchor="middle" font-size="14" fill="#6B7A73">العقيق · Al Aqiq</text>
-      <text x="396" y="100" text-anchor="middle" font-size="14" fill="#6B7A73">الياسمين · Al Yasmin</text>
-      <text x="648" y="100" text-anchor="middle" font-size="14" fill="#6B7A73">النرجس · Al Narjis</text>
-      <text x="648" y="270" text-anchor="middle" font-size="14" fill="#6B7A73">الصحافة · Al Sahafah</text>
+      <text x="137" y="248" text-anchor="middle" font-size="16" font-weight="700" fill="#004238">الملقا · Al Malqa</text>
+      <text x="140" y="380" text-anchor="middle" font-size="14" fill="#857F72">حطين · Hittin</text>
+      <text x="396" y="380" text-anchor="middle" font-size="14" fill="#857F72">العقيق · Al Aqiq</text>
+      <text x="396" y="100" text-anchor="middle" font-size="14" fill="#857F72">الياسمين · Al Yasmin</text>
+      <text x="648" y="100" text-anchor="middle" font-size="14" fill="#857F72">النرجس · Al Narjis</text>
+      <text x="648" y="270" text-anchor="middle" font-size="14" fill="#857F72">الصحافة · Al Sahafah</text>
       <!-- north -->
-      <text x="710" y="52" text-anchor="middle" font-size="15" fill="#6B7A73">شمال ↑ N</text>
+      <text x="710" y="52" text-anchor="middle" font-size="15" fill="#857F72">شمال ↑ N</text>
     </svg>
   </div>
   <p class="mapnote">خريطة توضيحية — ليست بمقياس رسم. <span class="en">Schematic map — not to scale.</span></p>
@@ -171,8 +171,8 @@
   </div>
 
   <footer class="doc">
-    <span>ديم سبيس — شارع أنس بن مالك، حي الملقا، الرياض · info@deemspace.com</span>
-    <span>التوافر كما في {{AVAIL_DATE}} — يُحدَّث من فريق ديم <span class="en">Availability as of {{AVAIL_DATE}}</span></span>
+    <span>ديم سبيس — شارع أنس بن مالك، حي الملقا، الرياض</span>
+    <span>التوافر كما في يوليو ٢٠٢٦ / July 2026 — يُحدَّث من فريق ديم <span class="en">Availability as of يوليو ٢٠٢٦ / July 2026</span></span>
   </footer>
 </div>
 </body>

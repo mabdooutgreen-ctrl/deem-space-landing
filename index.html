@@ -7,7 +7,6 @@
        PLACEHOLDERS IN THIS FILE (see README.md for the full list):
        · GTM-XXXXXXX            — 2× (script below + <noscript> after <body>)
        · https://deemspace.vercel.app — site URL (canonical/OG/hreflang) → your final domain
-       · {{MAP_EMBED}}          — footer Google Maps iframe
        · {{PRIVACY_URL}}        — footer privacy link
        · {{GOOGLE_REVIEWS_URL}} — reviews section link
        · {{LOGO_SVG}}           — official logo (typographic wordmark shipped as fallback)
@@ -323,7 +322,7 @@
           <div class="form-status" aria-live="polite">
             <div id="formSuccess" class="status-box status-success" hidden tabindex="-1">
               <p data-en="Got it ✔ We'll be in touch shortly. Download your availability + district map now.">تم استلام طلبك ✔ بنتواصل معك قريبًا. حمّل خريطة المواقع والتوافر الآن.</p>
-              <a class="btn btn-primary btn-sm" href="assets/deem-space-availability-map.html" target="_blank" rel="noopener" data-en="Download the map (PDF)">تحميل الخريطة (PDF)</a>
+              <a class="btn btn-primary btn-sm" href="assets/deem-space-availability-map.html" target="_blank" rel="noopener" data-en="Open the availability map">افتح خريطة المواقع والتوافر</a>
             </div>
             <div id="formError" class="status-box status-error" hidden>
               <p data-en="Couldn't send. Please try again.">تعذّر الإرسال. حاول مرة أخرى.</p>
@@ -401,14 +400,14 @@
           <p data-en="Anas Ibn Malik Street, Al Malqa, Riyadh.">شارع أنس بن مالك، حي الملقا، الرياض</p>
           <p data-en="Sun–Thu 9:00–17:00 (Fri–Sat closed).">الأحد–الخميس ٩:٠٠ ص – ٥:٠٠ م (الجمعة والسبت مغلق)</p>
           <!-- Plain, non-clickable phone (legitimacy only — deliberately NOT a call CTA) -->
-          <p><span dir="ltr">+966 11 500 1673</span></p>
+          <p class="footer-phone"><span dir="ltr">+966 11 500 1673</span></p>
         </div>
         <div class="footer-col">
           <h3 data-en="Location">الموقع</h3>
-          <!-- {{MAP_EMBED}}: paste the Google Maps <iframe> for the Al Malqa branch here,
-               replacing the placeholder box below.
-               Google Maps → Share → Embed a map → copy HTML. -->
-          <div class="map-ph">{{MAP_EMBED}}<br>Google Maps iframe — Al Malqa branch</div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.837082320899!2d46.5994964!3d24.801031599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee500008e91f9%3A0x7454eb38020b9753!2zREVFTSBTUEFDRSDZhdiz2KfYrdin2Kog2K_ZitmFINmB2LHYuSDYp9mE2YXZhNmC2Kc!5e0!3m2!1sen!2ssa!4v1783599731346!5m2!1sen!2ssa"
+                  title="Deem Space — Al Malqa, Riyadh"
+                  allowfullscreen="" loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
       </div>
       <div class="footer-bottom">
